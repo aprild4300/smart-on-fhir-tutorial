@@ -28,12 +28,19 @@
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
           var mrn;
+          var fin;
           for (var i = 0, len = patient.identifier.length; i < len; i++) {
             if (patient.identifier[i].type !== null && patient.identifier[i].type.text !== null && patient.identifier[i].type.text =='MRN')
             {[mrn=patient.identifier[i].value]};
           }
 console.log (mrn); 
-               
+          for (var i = 0, len = Encounter.identifier.length; i < len; i++) {
+            if (Encounter.identifier[i].type !== null && Encounter.identifier[i].type.text !== null && Encounter.identifier[i].type.text =='FIN')
+            {[fin=Encounter.identifier[i].value]};
+          }
+console.log (fin);   
+          
+          
                    
           
           var fname = '';
