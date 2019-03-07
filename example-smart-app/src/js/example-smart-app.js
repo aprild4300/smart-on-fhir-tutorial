@@ -30,7 +30,7 @@
           var mrn;
           for (var i = 0, len = patient.identifier.length; i < len; i++) {
             if (patient.identifier[i].type === null && patient.identifier[i].type.text === null && patient.identifier[i].type.text =='MRN')
-            {[mrn=patient.identifier[i].type.value]};
+            {[mrn=patient.identifier[i].value]};
           }
 
           var fname = '';
