@@ -33,6 +33,9 @@
             {[mrn=patient.identifier[i].value]};
           }
 console.log (mrn); 
+               
+                   
+          
           var fname = '';
           var lname = '';
 
@@ -51,6 +54,7 @@ console.log (mrn);
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.mrn = mrn;
+          p.fin = Encounter.identifier;
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
@@ -84,6 +88,7 @@ console.log (mrn);
       lname: {value: ''},
       gender: {value: ''},
       mrn: {value: ''},
+      fin: {value: ''},
       birthdate: {value: ''},
       height: {value: ''},
       systolicbp: {value: ''},
@@ -128,6 +133,7 @@ console.log (mrn);
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#mrn').html(p.mrn);
+    $('#fin').html(p.fin);
     $('#birthdate').html(p.birthdate);
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
