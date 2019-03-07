@@ -31,11 +31,11 @@
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
             if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN NBR')
             {[fin=enc.identifier[i].value]};
-            if (enc.identifier[i].location !== null && location[""0""].location.display !== null)
-            {[location=enc.identifier[i].location.display]};
-            if (enc.identifier[i].reason !== null && enc.identifier[i].reason.text !== null)
-            {[reason=enc.identifier[i].reason.text]};
-          }
+            }
+          for (var i = 0, len = enc.location.length; i < len; i++) {
+            if (enc.location[i].location !== null && enc.location[i].display !== null)
+            {[location=enc.location[i].display]};
+            }
 console.log (fin);  
 console.log (location);
 console.log (reason);         
