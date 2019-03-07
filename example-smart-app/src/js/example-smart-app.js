@@ -27,7 +27,11 @@
         $.when(pt, obv).done(function(patient, obv) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-          var mrn = patient.identifier;
+          var mrn;
+          for (var i = 0, len = patient.identifier.length; i < len; i++) {
+            if (patient.identifier[i].type === null && patient.identifier[i].text === null && patient.identifier[i].text =='MRN')
+            {[mrn=patient.identifier[i].value]};
+          }
 
           var fname = '';
           var lname = '';
