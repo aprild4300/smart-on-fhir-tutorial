@@ -42,6 +42,7 @@
 console.log (mrn); 
           console.log (enc);
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
+            enc = enc[0];
             if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN NBR')
             {[fin=enc.identifier[i].value]};
           }
