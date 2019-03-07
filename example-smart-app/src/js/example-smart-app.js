@@ -30,7 +30,7 @@
           console.log (enc);
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
             if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN NBR')
-            {[fin=enc.identifier[i].value]};
+            {fin=enc.identifier[i].value};
             }
          // for (var i = 0, len = enc.location.length; i < len; i++) {
          //   if (enc.location[i].location !== null && enc.location[i].display !== null)
