@@ -24,10 +24,8 @@
         var encs = smart.patient.api.fetchAll({
                     type: 'Encounter',                    
                   });
-    
-        
-        
-        
+                  
+       
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv, enc) {
@@ -39,8 +37,7 @@
             if (patient.identifier[i].type !== null && patient.identifier[i].type.text !== null && patient.identifier[i].type.text =='MRN')
             {[mrn=patient.identifier[i].value]};
           }
-console.log (mrn); 
-          
+console.log (mrn);        
            var enc = encs[0];
           console.log (enc);
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
