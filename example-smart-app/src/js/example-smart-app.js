@@ -48,8 +48,8 @@ console.log (fin);
           }
           
           
-                   
-          
+          var reason = '';         
+          var location = '';
           var fname = '';
           var lname = '';
 
@@ -69,6 +69,8 @@ console.log (fin);
           p.gender = gender;
           p.mrn = mrn;
           p.fin = fin;
+          p.location = location;
+          p.reason = reason;
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
@@ -103,6 +105,8 @@ console.log (fin);
       gender: {value: ''},
       mrn: {value: ''},
       fin: {value: ''},
+      location: {value: ''},
+      reason: {value: ''},
       birthdate: {value: ''},
       height: {value: ''},
       systolicbp: {value: ''},
@@ -148,6 +152,8 @@ console.log (fin);
     $('#gender').html(p.gender);
     $('#mrn').html(p.mrn);
     $('#fin').html(p.fin);
+    $('#location').html(p.location);
+    $('#reason').html(p.reason);
     $('#birthdate').html(p.birthdate);
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
