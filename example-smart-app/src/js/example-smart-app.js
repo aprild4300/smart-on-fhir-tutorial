@@ -32,7 +32,7 @@
             if (patient.identifier[i].type !== null && patient.identifier[i].type.text !== null && patient.identifier[i].type.text =='MRN')
             {[mrn=patient.identifier[i].value]};
           }
-
+console.log (mrn); 
           var fname = '';
           var lname = '';
 
