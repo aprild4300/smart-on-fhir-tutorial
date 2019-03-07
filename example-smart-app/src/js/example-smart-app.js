@@ -21,10 +21,16 @@
                       }
                     }
                   });
-
+        var enc = smart.patient.api.fetchAll({
+                    type: 'Encounter',                    
+                  });
+    
+        
+        
+        
         $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv).done(function(patient, obv, enc) {
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
           var mrn;
@@ -34,9 +40,9 @@
             {[mrn=patient.identifier[i].value]};
           }
 console.log (mrn); 
-          for (var i = 0, len = Encounter.identifier.length; i < len; i++) {
-            if (Encounter.identifier[i].type !== null && Encounter.identifier[i].type.text !== null && Encounter.identifier[i].type.text =='FIN')
-            {[fin=Encounter.identifier[i].value]};
+          for (var i = 0, len = enc.identifier.length; i < len; i++) {
+            if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN')
+            {[fin=enc.identifier[i].value]};
           }
 console.log (fin);   
           
