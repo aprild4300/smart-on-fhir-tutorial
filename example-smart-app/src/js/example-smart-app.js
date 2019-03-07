@@ -68,7 +68,7 @@ console.log (fin);
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.mrn = mrn;
-          p.fin = Encounter.identifier;
+          p.fin = fin;
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
