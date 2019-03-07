@@ -21,7 +21,7 @@
                       }
                     }
                   });
-        var enc = smart.patient.api.fetchAll({
+        var encs = smart.patient.api.fetchAll({
                     type: 'Encounter',                    
                   });
     
@@ -41,8 +41,8 @@
           }
 console.log (mrn); 
           console.log (enc);
+           enc = encs[0];
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
-            enc = enc[0];
             if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN NBR')
             {[fin=enc.identifier[i].value]};
           }
