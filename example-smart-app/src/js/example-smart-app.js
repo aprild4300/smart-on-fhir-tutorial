@@ -40,8 +40,9 @@
             {[mrn=patient.identifier[i].value]};
           }
 console.log (mrn); 
+          
+           var enc = encs[0];
           console.log (enc);
-           enc = encs[0];
           for (var i = 0, len = enc.identifier.length; i < len; i++) {
             if (enc.identifier[i].type !== null && enc.identifier[i].type.text !== null && enc.identifier[i].type.text =='FIN NBR')
             {[fin=enc.identifier[i].value]};
